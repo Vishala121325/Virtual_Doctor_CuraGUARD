@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuraGUARD | Welcome</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('{{ url_for('static', filename='assets/homepic.jpg') }}');">
+  
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-70 text-white px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">CuraGUARD</h1>
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:text-green-400">Home</a></li>
+      <li><a href="#login" class="hover:text-green-400" onclick="toggleTab('login')">Login</a></li>
+      <li><a href="#signup" class="hover:text-green-400" onclick="toggleTab('signup')">Sign Up</a></li>
+      <li><a href="/feedback" class="hover:text-green-400">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dark overlay -->
+  <div class="min-h-screen flex flex-col items-center justify-center bg-black bg-opacity-60 space-y-10">
+
+    <!-- Panel -->
+    <div class="w-full max-w-md p-8 rounded-xl backdrop-blur-xl bg-white bg-opacity-10 shadow-xl text-white">
+      <h1 class="text-3xl font-bold text-center mb-6">Welcome to CuraGUARD</h1>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center space-x-4 mb-6">
+        <button onclick="toggleTab('login')" id="loginTab" class="px-4 py-2 border border-white text-white rounded-md font-semibold transition">Login</button>
+        <button onclick="toggleTab('signup')" id="signupTab" class="px-4 py-2 border border-transparent text-white rounded-md font-semibold transition">Sign Up</button>
+      </div>
+
+      <!-- Message Box -->
+      <div id="messageBox" class="text-sm text-center mb-4 font-medium"></div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="space-y-4">
+        <input type="text" name="username" placeholder="Username" required class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-600" />
+        <input type="password" name="password" placeholder="Password" required class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-600" />
+        <button type="submit" class="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-md transition">Login</button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signupForm" class="hidden space-y-4">
+        <input type="text" name="username" placeholder="Username" required class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-600" />
+        <input type="password" name="password" placeholder="Create Password" required class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-600" />
+        <button type="submit" class="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md transition">Sign Up</button>
+      </form>
+    </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleTab(tab) {
+      const loginForm = document.getElementById("loginForm");
+      const signupForm = document.getElementById("signupForm");
+      const loginTab = document.getElementById("loginTab");
+      const signupTab = document.getElementById("signupTab");
+  
+      if (tab === 'login') {
+        loginForm.classList.remove("hidden");
+        signupForm.classList.add("hidden");
+        loginTab.classList.add("border-white");
+        loginTab.classList.remove("border-transparent", "text-gray-300");
+        signupTab.classList.remove("border-white");
+        signupTab.classList.add("border-transparent", "text-gray-300");
+      } else {
+        signupForm.classList.remove("hidden");
+        loginForm.classList.add("hidden");
+        signupTab.classList.add("border-white");
+        signupTab.classList.remove("border-transparent", "text-gray-300");
+        loginTab.classList.remove("border-white");
+        loginTab.classList.add("border-transparent", "text-gray-300");
+      }
+  
+      document.getElementById("messageBox").innerText = '';
+    }
+    
+    document.getElementById("signupForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const username = this.username.value;
+      const password = this.password.value;
+
+      const res = await fetch("/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ username, password })
+      });
+      const data = await res.json();
+      showMessage(data.message, data.success);
+
+      if (data.success) {
+        toggleTab('login');
+        this.reset();
+      }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const username = this.username.value;
+      const password = this.password.value;
+
+      const res = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ username, password })
+      });
+      const data = await res.json();
+      showMessage(data.message, data.success);
+
+      if (data.success) {
+        setTimeout(() => window.location.href = "/chatbot", 1000);
+      }
+    });
+
+    function showMessage(message, isSuccess) {
+      const box = document.getElementById("messageBox");
+      box.textContent = message;
+      box.className = `text-sm text-center mb-4 font-medium ${isSuccess ? 'text-green-400' : 'text-red-400'}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,907 @@
+{
+    "Fever (General)": {
+        "severity": "Mild To Moderate",
+        "tests": [
+            "CBC",
+            "Blood Culture",
+            "Malaria Test"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and whole grains",
+        "lifestyle": "Regular sleep, avoid stress, stay physically active as per condition",
+        "home_remedies": [
+            "Hydration",
+            "warm compress",
+            "rest",
+            "herbal teas if suitable"
+        ],
+        "medicines": [
+            "Consult physician; typically includes symptom-specific medicines",
+            "antibiotics",
+            "or antivirals"
+        ]
+    },
+    "Common Cold": {
+        "severity": "Mild To Moderate",
+        "tests": [
+            "Clinical diagnosis",
+            "Rapid Antigen (Respiratory Panel)"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and whole grains",
+        "lifestyle": "Regular sleep, avoid stress, stay physically active as per condition",
+        "home_remedies": [
+            "Hydration",
+            "warm compress",
+            "rest",
+            "herbal teas if suitable"
+        ],
+        "medicines": [
+            "Consult physician; typically includes symptom-specific medicines",
+            "antibiotics",
+            "or antivirals"
+        ]
+    },
+    "Flu (Influenza)": {
+        "severity": "Mild To Moderate",
+        "tests": [
+            "Rapid Flu Test",
+            "RT-PCR"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and whole grains",
+        "lifestyle": "Regular sleep, avoid stress, stay physically active as per condition",
+        "home_remedies": [
+            "Hydration",
+            "warm compress",
+            "rest",
+            "herbal teas if suitable"
+        ],
+        "medicines": [
+            "Consult physician; typically includes symptom-specific medicines",
+            "antibiotics",
+            "or antivirals"
+        ]
+    },
+    "Dengue": {
+        "severity": "Severe (Can Be)",
+        "tests": [
+            "Dengue NS1",
+            "IgM/IgG",
+            "CBC"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and whole grains",
+        "lifestyle": "Regular sleep, avoid stress, stay physically active as per condition",
+        "home_remedies": [
+            "Hydration",
+            "warm compress",
+            "rest",
+            "herbal teas if suitable"
+        ],
+        "medicines": [
+            "Consult physician; typically includes symptom-specific medicines",
+            "antibiotics",
+            "or antivirals"
+        ]
+    },
+    "Malaria": {
+        "severity": "Severe (If Delayed)",
+        "tests": [
+            "Peripheral Smear",
+            "Malaria Antigen"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and whole grains",
+        "lifestyle": "Regular sleep, avoid stress, stay physically active as per condition",
+        "home_remedies": [
+            "Hydration",
+            "warm compress",
+            "rest",
+            "herbal teas if suitable"
+        ],
+        "medicines": [
+            "Consult physician; typically includes symptom-specific medicines",
+            "antibiotics",
+            "or antivirals"
+        ]
+    },
+    "Typhoid": {
+        "severity": "Severe (If Untreated)",
+        "tests": [
+            "Widal",
+            "Typhidot",
+            "Blood Culture"
+        ],
+        "diet": "Soft, easily digestible foods, ORS, bananas, boiled potatoes",
+        "lifestyle": "Complete rest, hydration, avoid heavy meals",
+        "home_remedies": [
+            "ORS",
+            "basil tea",
+            "apple cider vinegar (diluted)"
+        ],
+        "medicines": [
+            "Ciprofloxacin",
+            "Azithromycin",
+            "Paracetamol"
+        ]
+    },
+    "Tuberculosis (Tb)": {
+        "severity": "Severe",
+        "tests": [
+            "Sputum Test",
+            "Chest X-ray",
+            "GeneXpert"
+        ],
+        "diet": "Balanced diet with fruits, vegetables, lean proteins, and high-calorie intake",
+        "lifestyle": "Avoid exposure, maintain hygiene, and take regular medication",
+        "home_remedies": [
+            "Garlic",
+            "mint juice",
+            "and gooseberries"
+        ],
+        "medicines": [
+            "Isoniazid",
+            "Rifampicin (consult doctor)"
+        ]
+    },
+    "Covid-19": {
+        "severity": "Mild To Critical",
+        "tests": [
+            "RT-PCR",
+            "Antigen Test",
+            "Chest CT"
+        ],
+        "diet": "Nutritious food rich in vitamins, protein, and fluids",
+        "lifestyle": "Isolate, stay active indoors, rest, hydrate",
+        "home_remedies": [
+            "Steam inhalation",
+            "warm salt water gargles"
+        ],
+        "medicines": [
+            "Paracetamol",
+            "antivirals as prescribed"
+        ]
+    },
+    "Chikungunya": {
+        "severity": "Moderate",
+        "tests": [
+            "Chikungunya IgM",
+            "RT-PCR"
+        ],
+        "diet": "Hydrating foods, fruits, and high-protein meals",
+        "lifestyle": "Rest, mosquito protection, hydration",
+        "home_remedies": [
+            "Papaya leaf juice (traditional)",
+            "turmeric milk"
+        ],
+        "medicines": [
+            "Paracetamol",
+            "NSAIDs (avoid aspirin)"
+        ]
+    },
+    "Zika Virus": {
+        "severity": "Mild",
+        "tests": [
+            "Zika RT-PCR",
+            "IgM Test"
+        ],
+        "diet": "Hydrating fluids, leafy greens, lean proteins",
+        "lifestyle": "Avoid mosquito bites, rest, hydrate",
+        "home_remedies": [
+            "Neem",
+            "tulsi tea",
+            "rest"
+        ],
+        "medicines": [
+            "Symptomatic treatment",
+            "pain relief meds"
+        ]
+    },
+    "Leptospirosis": {
+        "severity": "Severe",
+        "tests": [
+            "Leptospira IgM ELISA",
+            "MAT"
+        ],
+        "diet": "Balanced nutritious meals with extra fluids",
+        "lifestyle": "Avoid contact with flood waters, rest",
+        "home_remedies": [
+            "Turmeric in milk",
+            "hydration"
+        ],
+        "medicines": [
+            "Doxycycline",
+            "Penicillin (consult doctor)"
+        ]
+    },
+    "Hepatitis A": {
+        "severity": "Moderate",
+        "tests": [
+            "Hep A IgM",
+            "LFT"
+        ],
+        "diet": "Low-fat, high-carb, clean meals",
+        "lifestyle": "Avoid alcohol, rest, hygiene",
+        "home_remedies": [
+            "Coconut water",
+            "gooseberry juice"
+        ],
+        "medicines": [
+            "No specific; symptomatic treatment"
+        ]
+    },
+    "Hepatitis B": {
+        "severity": "Chronic/Severe",
+        "tests": [
+            "HBsAg",
+            "LFT",
+            "Viral Load"
+        ],
+        "diet": "Lean proteins, fruits, avoid fat/alcohol",
+        "lifestyle": "Vaccination, avoid sharing needles",
+        "home_remedies": [
+            "Licorice root tea",
+            "turmeric"
+        ],
+        "medicines": [
+            "Antivirals (Entecavir",
+            "Tenofovir)"
+        ]
+    },
+    "Urinary Tract Infection (Uti)": {
+        "severity": "Mild To Moderate",
+        "tests": [
+            "Urinalysis",
+            "Urine Culture"
+        ],
+        "diet": "Cranberries, water-rich fruits, avoid caffeine",
+        "lifestyle": "Hygiene, frequent urination",
+        "home_remedies": [
+            "Cranberry juice",
+            "baking soda water"
+        ],
+        "medicines": [
+            "Nitrofurantoin",
+            "Fosfomycin"
+        ]
+    },
+    "Gastroenteritis": {
+        "severity": "Mild",
+        "tests": [
+            "Stool Test",
+            "Electrolytes"
+        ],
+        "diet": "BRAT diet (Banana, Rice, Applesauce, Toast)",
+        "lifestyle": "Hygiene, rest, stay hydrated",
+        "home_remedies": [
+            "Ginger tea",
+            "ORS"
+        ],
+        "medicines": [
+            "Oral rehydration",
+            "anti-diarrheals"
+        ]
+    },
+    "Asthma": {
+        "severity": "Depends On Control",
+        "tests": [
+            "Spirometry",
+            "Peak Flow Test"
+        ],
+        "diet": "Anti-inflammatory foods, omega-3, avoid allergens",
+        "lifestyle": "Avoid triggers, monitor lung function",
+        "home_remedies": [
+            "Steam inhalation",
+            "ginger",
+            "honey"
+        ],
+        "medicines": [
+            "Inhalers (Albuterol)",
+            "corticosteroids"
+        ]
+    },
+    "Hypertension": {
+        "severity": "Silent Killer",
+        "tests": [
+            "BP Monitoring",
+            "ECG"
+        ],
+        "diet": "Low sodium, high potassium foods",
+        "lifestyle": "Reduce stress, regular exercise",
+        "home_remedies": [
+            "Garlic",
+            "hibiscus tea"
+        ],
+        "medicines": [
+            "Amlodipine",
+            "Losartan"
+        ]
+    },
+    "Diabetes": {
+        "severity": "Chronic/Severe",
+        "tests": [
+            "Fasting Sugar",
+            "HbA1c"
+        ],
+        "diet": "Low sugar/carb diet, whole grains",
+        "lifestyle": "Monitor sugar, regular physical activity",
+        "home_remedies": [
+            "Fenugreek seeds",
+            "cinnamon water"
+        ],
+        "medicines": [
+            "Metformin",
+            "Insulin"
+        ]
+    },
+    "Sore Throat / Tonsillitis": {
+        "severity": "Low",
+        "tests": [
+            "Throat swab"
+        ],
+        "diet": "Warm fluids, soft foods",
+        "lifestyle": "Avoid smoking, hydration",
+        "home_remedies": [
+            "Saltwater gargle",
+            "honey-lemon tea"
+        ],
+        "medicines": [
+            "Lozenges",
+            "antibiotics (if bacterial)"
+        ]
+    },
+    "Lactose Intolerance": {
+        "severity": "Low",
+        "tests": [
+            "Hydrogen breath test"
+        ],
+        "diet": "Lactose-free, calcium-rich foods",
+        "lifestyle": "Enzyme pills, label reading",
+        "home_remedies": [
+            "Yogurt (probiotic)",
+            "ginger tea"
+        ],
+        "medicines": [
+            "Lactase supplements"
+        ]
+    },
+    "Celiac Disease": {
+        "severity": "Medium",
+        "tests": [
+            "tTG-IgA blood test",
+            "biopsy"
+        ],
+        "diet": "Gluten-free diet",
+        "lifestyle": "Avoid gluten strictly, monitor symptoms",
+        "home_remedies": [
+            "Turmeric milk",
+            "aloe vera"
+        ],
+        "medicines": [
+            "Nutritional support",
+            "anti-inflammatory if needed"
+        ]
+    },
+    "Gallstones": {
+        "severity": "Moderate To Severe",
+        "tests": [
+            "Ultrasound",
+            "LFT"
+        ],
+        "diet": "Low-fat, fiber-rich foods, avoid fried items",
+        "lifestyle": "Maintain healthy weight, regular meals",
+        "home_remedies": [
+            "Apple cider vinegar",
+            "peppermint tea"
+        ],
+        "medicines": [
+            "Ursodiol",
+            "Pain relievers"
+        ]
+    },
+    "Kidney Stones": {
+        "severity": "Severe (Painful)",
+        "tests": [
+            "Ultrasound",
+            "CT Scan",
+            "Urinalysis"
+        ],
+        "diet": "Plenty of water, lemon juice, avoid oxalate-rich foods",
+        "lifestyle": "Stay hydrated, avoid excessive salt",
+        "home_remedies": [
+            "Barley water",
+            "basil tea",
+            "pomegranate juice"
+        ],
+        "medicines": [
+            "Tamsulosin",
+            "Ibuprofen",
+            "Potassium citrate"
+        ]
+    },
+    "Liver Cirrhosis": {
+        "severity": "Chronic/Severe",
+        "tests": [
+            "LFT",
+            "Fibroscan",
+            "Ultrasound",
+            "Biopsy"
+        ],
+        "diet": "Low-salt, high-protein (if allowed)",
+        "lifestyle": "No alcohol, regular monitoring",
+        "home_remedies": [
+            "Papaya",
+            "licorice root"
+        ],
+        "medicines": [
+            "Diuretics",
+            "Lactulose",
+            "Antivirals"
+        ]
+    },
+    "Heart Disease": {
+        "severity": "Very High",
+        "tests": [
+            "ECG",
+            "ECHO",
+            "TMT"
+        ],
+        "diet": "Mediterranean diet",
+        "lifestyle": "No smoking, stress reduction",
+        "home_remedies": [
+            "Garlic",
+            "omega-3s"
+        ],
+        "medicines": [
+            "Statins",
+            "aspirin",
+            "beta blockers"
+        ]
+    },
+    "Stroke": {
+        "severity": "Very High",
+        "tests": [
+            "CT/MRI",
+            "blood tests"
+        ],
+        "diet": "Low sodium, DASH diet",
+        "lifestyle": "Rehab, avoid stress/alcohol",
+        "home_remedies": [
+            "Turmeric",
+            "green tea"
+        ],
+        "medicines": [
+            "Blood thinners",
+            "statins"
+        ]
+    },
+    "Appendicitis": {
+        "severity": "High",
+        "tests": [
+            "CT scan",
+            "ultrasound"
+        ],
+        "diet": "Light, easily digestible foods",
+        "lifestyle": "Post-surgery rest, avoid heavy lifting",
+        "home_remedies": [
+            "Ginger",
+            "basil (only if mild pain)"
+        ],
+        "medicines": [
+            "Surgery is primary treatment"
+        ]
+    },
+    "Autism (Asd)": {
+        "severity": "Varies",
+        "tests": [
+            "Behavioral evaluation"
+        ],
+        "diet": "Balanced, gluten/casein-free (if needed)",
+        "lifestyle": "Routine, therapy, sleep hygiene",
+        "home_remedies": [
+            "Omega-3s",
+            "probiotics"
+        ],
+        "medicines": [
+            "Behavioral therapy",
+            "risperidone (if prescribed)"
+        ]
+    },
+    "Hypothyroidism": {
+        "severity": "Moderate",
+        "tests": [
+            "TSH",
+            "T3",
+            "T4 Test"
+        ],
+        "diet": "Iodine, selenium, zinc-rich foods, avoid soy",
+        "lifestyle": "Regular exercise, good sleep",
+        "home_remedies": [
+            "Coconut oil",
+            "ginger tea",
+            "avoid goitrogens"
+        ],
+        "medicines": [
+            "Levothyroxine"
+        ]
+    },
+    "Hyperthyroidism": {
+        "severity": "Moderate",
+        "tests": [
+            "TSH",
+            "T3",
+            "T4 Test"
+        ],
+        "diet": "Low-iodine, cruciferous veggies",
+        "lifestyle": "Stress management, regular checkups",
+        "home_remedies": [
+            "Lemon balm tea",
+            "bugleweed"
+        ],
+        "medicines": [
+            "Methimazole",
+            "Beta-blockers"
+        ]
+    },
+    "Sinus Infection": {
+        "severity": "Mild",
+        "tests": [
+            "Sinus X-ray",
+            "Nasal Swab"
+        ],
+        "diet": "Warm fluids, avoid dairy, spicy soups",
+        "lifestyle": "Steam inhalation, avoid allergens",
+        "home_remedies": [
+            "Neti pot rinse",
+            "eucalyptus oil steam"
+        ],
+        "medicines": [
+            "Nasal sprays",
+            "Amoxicillin (if bacterial)"
+        ]
+    },
+    "Scabies": {
+        "severity": "Mild",
+        "tests": [
+            "Skin Scraping Test"
+        ],
+        "diet": "No special diet",
+        "lifestyle": "Wash clothes/bedding, hygiene",
+        "home_remedies": [
+            "Neem oil",
+            "tea tree oil"
+        ],
+        "medicines": [
+            "Permethrin cream",
+            "Ivermectin"
+        ]
+    },
+    "Heart Attack (Myocardial Infarction)": {
+        "severity": "Emergency/Critical",
+        "tests": [
+            "ECG",
+            "Troponin",
+            "Echocardiogram",
+            "Coronary Angiography"
+        ],
+        "diet": "Low-fat, low-sodium, heart-healthy foods",
+        "lifestyle": "Quit smoking, stress control",
+        "home_remedies": [
+            "Garlic",
+            "omega-3s",
+            "green tea"
+        ],
+        "medicines": [
+            "Aspirin",
+            "Statins",
+            "Beta-blockers"
+        ]
+    },
+    "Stroke (Brain Attack)": {
+        "severity": "Emergency/Critical",
+        "tests": [
+            "CT/MRI Brain",
+            "Carotid Doppler",
+            "ECG"
+        ],
+        "diet": "Low-sodium, potassium-rich foods",
+        "lifestyle": "Monitor BP, rehab, avoid alcohol",
+        "home_remedies": [
+            "Turmeric",
+            "garlic",
+            "green tea"
+        ],
+        "medicines": [
+            "Clopidogrel",
+            "Aspirin",
+            "BP meds"
+        ]
+    },
+    "Hypertensive Heart Disease": {
+        "severity": "Severe",
+        "tests": [
+            "ECG",
+            "Echocardiogram",
+            "BP Monitoring"
+        ],
+        "diet": "Low-salt, fiber-rich foods",
+        "lifestyle": "Exercise, reduce stress",
+        "home_remedies": [
+            "Hibiscus tea",
+            "garlic"
+        ],
+        "medicines": [
+            "ACE inhibitors",
+            "Diuretics",
+            "Beta-blockers"
+        ]
+    },
+    "Coronary Artery Disease (Cad)": {
+        "severity": "Severe",
+        "tests": [
+            "Stress Test",
+            "CT Angiography",
+            "ECG"
+        ],
+        "diet": "Mediterranean diet, omega-3s, fiber",
+        "lifestyle": "Quit smoking, exercise",
+        "home_remedies": [
+            "Pomegranate",
+            "green tea",
+            "turmeric"
+        ],
+        "medicines": [
+            "Statins",
+            "Aspirin",
+            "Nitrates"
+        ]
+    },
+    "Breast Cancer": {
+        "severity": "Severe To Critical",
+        "tests": [
+            "Mammogram",
+            "Breast USG",
+            "Biopsy"
+        ],
+        "diet": "Cruciferous veggies, antioxidant-rich foods",
+        "lifestyle": "Regular screening, active lifestyle",
+        "home_remedies": [
+            "Flaxseeds",
+            "green tea"
+        ],
+        "medicines": [
+            "Tamoxifen",
+            "Chemotherapy"
+        ]
+    },
+    "Lung Cancer": {
+        "severity": "Critical",
+        "tests": [
+            "Chest X-ray",
+            "CT Scan",
+            "Bronchoscopy",
+            "Biopsy"
+        ],
+        "diet": "High-protein, antioxidants, fluids",
+        "lifestyle": "No smoking, clean air",
+        "home_remedies": [
+            "Turmeric",
+            "ginger"
+        ],
+        "medicines": [
+            "Chemotherapy",
+            "Immunotherapy"
+        ]
+    },
+    "Oral Cancer": {
+        "severity": "Critical",
+        "tests": [
+            "Oral Exam",
+            "Biopsy",
+            "CT/MRI"
+        ],
+        "diet": "Soft, non-spicy food",
+        "lifestyle": "Quit tobacco, maintain oral hygiene",
+        "home_remedies": [
+            "Turmeric",
+            "holy basil"
+        ],
+        "medicines": [
+            "Surgery",
+            "Radiotherapy",
+            "Chemotherapy"
+        ]
+    },
+    "Cervical Cancer": {
+        "severity": "Critical",
+        "tests": [
+            "Pap Smear",
+            "HPV DNA Test",
+            "Biopsy"
+        ],
+        "diet": "Leafy greens, folate-rich foods",
+        "lifestyle": "HPV vaccine, regular screening",
+        "home_remedies": [
+            "Green tea",
+            "curcumin"
+        ],
+        "medicines": [
+            "Radiotherapy",
+            "Chemotherapy"
+        ]
+    },
+    "Colon Cancer": {
+        "severity": "Severe To Critical",
+        "tests": [
+            "Colonoscopy",
+            "Stool DNA",
+            "Biopsy"
+        ],
+        "diet": "High-fiber, low red meat",
+        "lifestyle": "Regular screenings, exercise",
+        "home_remedies": [
+            "Garlic",
+            "ginger"
+        ],
+        "medicines": [
+            "Chemotherapy",
+            "Targeted therapy"
+        ]
+    },
+    "Prostate Cancer (Men)": {
+        "severity": "Severe To Critical",
+        "tests": [
+            "PSA Blood Test",
+            "Digital Rectal Exam",
+            "MRI",
+            "Biopsy"
+        ],
+        "diet": "Tomatoes, soy, low-fat diet",
+        "lifestyle": "Healthy weight, PSA tests",
+        "home_remedies": [
+            "Green tea",
+            "pomegranate"
+        ],
+        "medicines": [
+            "Hormone therapy",
+            "Radiation"
+        ]
+    },
+    "Leukemia (Blood Cancer)": {
+        "severity": "Critical",
+        "tests": [
+            "CBC",
+            "Bone Marrow Biopsy",
+            "Flow Cytometry"
+        ],
+        "diet": "Iron-rich, fresh fruits",
+        "lifestyle": "Infection prevention, rest",
+        "home_remedies": [
+            "Turmeric",
+            "ginger"
+        ],
+        "medicines": [
+            "Chemotherapy",
+            "Bone marrow transplant"
+        ]
+    },
+    "Kidney Failure": {
+        "severity": "Severe/Critical",
+        "tests": [
+            "Serum Creatinine",
+            "GFR",
+            "Ultrasound"
+        ],
+        "diet": "Low sodium, potassium, phosphorus",
+        "lifestyle": "BP & sugar control, fluid restriction",
+        "home_remedies": [
+            "Cranberry juice (limited)"
+        ],
+        "medicines": [
+            "Diuretics",
+            "Erythropoietin",
+            "Phosphate binders"
+        ]
+    },
+    "Pancreatitis (Acute/Chronic)": {
+        "severity": "Severe",
+        "tests": [
+            "Serum Amylase/Lipase",
+            "CT Abdomen"
+        ],
+        "diet": "Low-fat, soft foods, hydration",
+        "lifestyle": "No smoking/alcohol",
+        "home_remedies": [
+            "Ginger tea",
+            "coconut water"
+        ],
+        "medicines": [
+            "Pain relievers",
+            "Pancreatic enzymes"
+        ]
+    },
+    "Epilepsy": {
+        "severity": "Moderate To Severe",
+        "tests": [
+            "EEG",
+            "Brain MRI",
+            "Blood Tests"
+        ],
+        "diet": "Ketogenic diet (sometimes)",
+        "lifestyle": "Regular sleep, avoid triggers",
+        "home_remedies": [
+            "Chamomile tea",
+            "yoga"
+        ],
+        "medicines": [
+            "Valproate",
+            "Levetiracetam",
+            "Carbamazepine"
+        ]
+    },
+    "Multiple Sclerosis (Ms)": {
+        "severity": "Severe",
+        "tests": [
+            "MRI Brain/Spine",
+            "CSF Test"
+        ],
+        "diet": "Vitamin D, anti-inflammatory foods",
+        "lifestyle": "Light exercise, stress control",
+        "home_remedies": [
+            "Omega-3s",
+            "turmeric"
+        ],
+        "medicines": [
+            "Interferons",
+            "Corticosteroids"
+        ]
+    },
+    "Parkinson\u2019S Disease": {
+        "severity": "Chronic/Progressive",
+        "tests": [
+            "Neurological Exam",
+            "DaTscan"
+        ],
+        "diet": "High-fiber, hydration, balanced meals",
+        "lifestyle": "Physical therapy, safe home environment",
+        "home_remedies": [
+            "Green tea",
+            "fava beans"
+        ],
+        "medicines": [
+            "Levodopa",
+            "Dopamine agonists"
+        ]
+    },
+    "Als (Motor Neuron Disease)": {
+        "severity": "Critical/Progressive",
+        "tests": [
+            "EMG",
+            "Nerve Conduction",
+            "Genetic Testing"
+        ],
+        "diet": "High-calorie soft foods",
+        "lifestyle": "Respiratory support, mobility aids",
+        "home_remedies": [
+            "Massage therapy",
+            "meditation"
+        ],
+        "medicines": [
+            "Riluzole",
+            "Edaravone"
+        ]
+    },
+    "Spinal Cord Injury": {
+        "severity": "Severe",
+        "tests": [
+            "MRI Spine",
+            "Neurological Tests"
+        ],
+        "diet": "High-calcium, high-fiber",
+        "lifestyle": "Physiotherapy, mobility support",
+        "home_remedies": [
+            "Warm compress",
+            "turmeric"
+        ],
+        "medicines": [
+            "Steroids (initial)",
+            "Muscle relaxants"
+        ]
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CuraGUARD - Feedback</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-slate-800 to-slate-950 text-white min-h-screen">
+
+  <!-- Background Image -->
+  <div class="fixed inset-0 z-0">
+    <img src="{{ url_for('static', filename='assets/feedbackpic.jpg') }}" alt="Feedback Background"
+         class="w-full h-full object-cover opacity-40" />
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white/10 backdrop-blur-md shadow-md border-b border-white/10">
+      <div class="flex items-center space-x-3">
+        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" class="h-8 w-8">
+        <span class="text-lg font-bold tracking-wide">CuraGUARD</span>
+      </div>
+      <div class="space-x-6">
+        <a href="/" class="hover:text-teal-300 transition"><i class="fa fa-home"></i> Home</a>
+        <a href="/chatbot" class="hover:text-teal-300 transition"><i class="fa fa-robot"></i> Chatbot</a>
+      </div>
+    </nav>
+
+    <!-- Feedback Section -->
+    <div class="flex flex-col items-center justify-center px-4 py-10">
+      <div class="w-full max-w-lg bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl space-y-4">
+        <h2 class="text-2xl font-semibold text-center mb-4"><i class="fa fa-comments text-teal-400"></i> We value your feedback</h2>
+
+        <input id="fbName" type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-teal-500"/>
+        <textarea id="fbText" placeholder="Your Feedback..." rows="4" class="w-full px-4 py-2 rounded-lg bg-gray-100 text-black focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+
+        <button onclick="submitFeedback()" class="w-full bg-teal-500 hover:bg-teal-600 transition text-white py-2 rounded-lg">
+          <i class="fa fa-paper-plane"></i> Submit Feedback
+        </button>
+      </div>
+
+      <!-- Reviews -->
+      <div class="w-full max-w-2xl mt-10 bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-xl">
+        <h3 class="text-xl font-semibold mb-4 text-teal-300"><i class="fa fa-star"></i> Recent Reviews</h3>
+        <div id="reviews" class="space-y-3 text-sm text-gray-200">
+          <p><strong>Aryan:</strong> Helpful assistant, loved the advice! ⭐⭐⭐⭐</p>
+          <p><strong>Sneha:</strong> Clear suggestions. Would recommend! ⭐⭐⭐⭐⭐</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function submitFeedback() {
+      const name = document.getElementById("fbName").value.trim();
+      const feedback = document.getElementById("fbText").value.trim();
+      if (!name || !feedback) return alert("Please fill out both fields!");
+
+      const reviewBox = document.getElementById("reviews");
+      const newReview = document.createElement("p");
+      newReview.innerHTML = `<strong>${name}:</strong> ${feedback}`;
+      reviewBox.prepend(newReview);
+
+      // Clear inputs
+      document.getElementById("fbName").value = "";
+      document.getElementById("fbText").value = "";
+
+      // Show a success message
+      const successDiv = document.createElement("div");
+      successDiv.innerHTML = `<p class="text-green-400 text-center mt-4 font-semibold">🎉 Thank you for your feedback! Redirecting to home...</p>`;
+      document.querySelector(".flex.flex-col").appendChild(successDiv);
+
+      // Redirect after 3 seconds
+      setTimeout(() => {
+        window.location.href = "/home";
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>

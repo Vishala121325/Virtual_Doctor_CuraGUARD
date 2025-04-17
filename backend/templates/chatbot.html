@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CuraGUARD - Symptom Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="relative bg-gradient-to-r from-slate-800 via-slate-900 to-slate-950 text-white min-h-screen">
+
+  <!-- Background Image with 40% opacity -->
+  <div class="fixed inset-0 z-0">
+    <img src="{{ url_for('static', filename='assets/chatbotpic.jpg') }}" class="w-full h-full object-cover opacity-40" alt="Background"/>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="relative z-10 flex items-center justify-between px-6 py-4 bg-white/10 backdrop-blur-md shadow-md border-b border-white/10">
+    <div class="flex items-center space-x-3">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" class="h-8 w-8">
+      <span class="text-lg font-bold tracking-wide">CuraGUARD</span>
+    </div>
+    <div class="space-x-6">
+      <a href="/" class="hover:text-teal-300 transition"><i class="fa fa-home"></i> Home</a>
+      <a href="/logout" class="hover:text-teal-300 transition"><i class="fa fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <!-- Chat Section -->
+  <div class="relative z-10 flex justify-center items-center p-6">
+    <div class="w-full max-w-2xl bg-white/10 backdrop-blur-lg shadow-xl rounded-xl p-6 space-y-4">
+      <div>
+        <h2 class="text-xl font-semibold"><i class="fa fa-robot mr-2 text-teal-300"></i>CuraBot - Symptom Assistant</h2>
+        <p class="text-sm text-gray-300">Hello! Describe your symptoms and I'll try to help you.</p>
+      </div>
+      
+      <div id="chatResponse" class="space-y-2 max-h-64 overflow-y-auto pr-2 text-sm">
+        <p><strong>Bot:</strong> 👋 Hello! What symptoms are you experiencing today?</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <input id="userInput" type="text" placeholder="Describe your symptoms..." class="flex-1 p-2 rounded-md text-black" />
+        <button onclick="sendMessage()" class="bg-teal-500 hover:bg-teal-600 transition text-white px-4 py-2 rounded-md">
+          <i class="fa fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/feedback" class="text-teal-300 hover:underline">💬 Give Feedback</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const responseBox = document.getElementById("chatResponse");
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      responseBox.innerHTML += `<p><strong>You:</strong> ${message}</p><p><em>Bot is thinking...</em></p>`;
+      responseBox.scrollTop = responseBox.scrollHeight;
+
+      fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      })
+      .then(res => res.json())
+      .then(data => {
+        responseBox.innerHTML += `
+          <p><strong>Bot:</strong> ${data.reply.replace(/\n/g, "<br>")}</p>
+        `;
+        responseBox.scrollTop = responseBox.scrollHeight;
+      })
+      .catch(() => {
+        responseBox.innerHTML += `<p><strong>Error:</strong> Assistant is unavailable. Try again later.</p>`;
+      });
+
+      input.value = "";
+    }
+  </script>
+</body>
+</html>

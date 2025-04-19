@@ -19,7 +19,6 @@ CuraGUARD is a conversational AI-powered symptom checker designed to bridge the 
 CuraGUARD comes packed with practical and powerful health-focused features:
 
 - 🤖 **Symptom Prediction** using trained machine learning models
-- 🗣️ **Voice & Text Input** support for flexible interaction
 - 📚 **Medical Knowledge Base** backed by reliable health datasets
 - 💡 **Real-Time Suggestions** for possible actions and care
 - 🧘 **Daily Wellness Tips** to encourage preventive care
